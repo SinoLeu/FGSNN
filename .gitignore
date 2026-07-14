@@ -25,3 +25,7 @@
 !models/**
 !utils/
 !utils/**
+
+# Ignore Python bytecode and cache directories.
+**/__pycache__/
+**/*.pyc
