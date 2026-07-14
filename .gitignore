@@ -1,0 +1,27 @@
+# Ignore everything by default.
+*
+
+# Keep the ignore file itself.
+!.gitignore
+
+# Keep the project README and architecture figure.
+!readme.md
+!arch_ijcv.png
+
+# Keep training-related Python files in the repository root.
+!pl_train*.py
+
+# Keep the main training entry.
+!pl_train_kd_our_snn.py
+
+# Keep the training package and everything under it.
+!pl_train/
+!pl_train/**
+
+# Keep the core training code used by the main entry.
+!config/
+!config/**
+!models/
+!models/**
+!utils/
+!utils/**

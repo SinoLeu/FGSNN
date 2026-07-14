@@ -1,0 +1,20 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/cars/train' --test_dir '../data/cars/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'teacher_swin_multistage_module'
+batch_size: 32
+input_size: 224
+train_dir: '../data/aircraft/train'
+test_dir: '../data/aircraft/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 100
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+arch: 'swin_base_patch4_window7_224'
+pre_trained_path: 'logs/'
+learning_rate: 0.0001
+pre_trained_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_aircraft.pth'
+smoothing: 0.1
+dataset: 'aircraft'
+stu_arch: 'm'

@@ -1,0 +1,40 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/nabirds/train' --test_dir '../data/nabirds/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'our_samplekdsnn_nabirds'
+batch_size: 16
+input_size: 224
+train_dir: '../data/Nabirds/nabirds/train'
+test_dir: '../data/Nabirds/nabirds/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 555
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+stu_arch: 'm'
+name: 'qkformer'
+# stu_arch: 'l'
+# name: 'resformer'
+tea_arch: 'swin_base_patch4_window7_224'
+pre_trained_tea_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_nabirds.pth'
+# learning_rate: 0.00025
+learning_rate: 0.00055
+# learning_rate: 0.01
+dataset: 'nabirds'
+T: 2
+# cam_path: 'vit_base_nabirds_CAM_data_nabirds.h5'
+# multistage_pth_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_nabirds_multistage.pth'
+# hyper_cam: 4.5
+kd_weight: 1.1
+smoothing: 0.2
+noise_weight: 0.5
+# top_k: 50
+# kd_weight: 1.1
+# smoothing: 0.1
+hyper_cam: 14.5
+# hyper_cam: 12.5
+noise_weight: 0.9
+# top_k: 50
+# smoothing: 0.2
+opter: 'Adam'
+# opter: 'SGD'

@@ -1,0 +1,22 @@
+# config.yml
+name_space: 'student_snn_aircraft'
+batch_size: 32
+input_size: 224
+train_dir: '../data/aircraft/train'
+test_dir: '../data/aircraft/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 100
+is_distributed: false
+is_transfer: false
+mixed: '16-mixed'
+# arch: 'l'
+# name: 'resformer'
+name: 'resnet'
+arch: '50'
+dataset: 'aircraft'
+T: 4
+learning_rate: 0.0001
+# lr=1e-4,
+# learning_rate: 0.1
+smoothing: 0.1

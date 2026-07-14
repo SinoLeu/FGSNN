@@ -1,0 +1,20 @@
+# config.yml
+name_space: 'student_snn_foods'
+batch_size: 16
+input_size: 224
+train_dir: '../data/foods/train'
+test_dir: '../data/foods/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 101
+is_distributed: false
+is_transfer: false
+mixed: '16-mixed'
+arch: 'l'
+name: 'resformer'
+dataset: 'foods'
+T: 4
+learning_rate: 0.0001
+# lr=1e-4,
+# learning_rate: 0.1
+smoothing: 0.2

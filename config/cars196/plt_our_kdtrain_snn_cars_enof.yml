@@ -1,0 +1,34 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/cars/train' --test_dir '../data/cars/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'our_enof_cars'
+batch_size: 16
+input_size: 224
+train_dir: '../data/cars/train'
+test_dir: '../data/cars/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 196
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# stu_arch: 'l'
+# name: 'resformer'
+stu_arch: 'm'
+name: 'qkformer'
+# stu_arch: 'l'
+# name: 'resformer'
+tea_arch: 'swin_base_patch4_window7_224'
+pre_trained_tea_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_cars.pth'
+tea_arch_cam: 'resnet50.a1_in1k'
+pre_trained_tea_cam_path: 'pre_trained_ann_model/resnet50.a1_in1k_cars.pth'
+learning_rate: 0.00025
+dataset: 'cars'
+T: 1
+cam_path: 'resnet50_cars_CAM_data_cars.h5'
+# multistage_pth_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_cars_multistage.pth'
+hyper_cam: 12.0
+noise_weight: 0.9
+kd_weight: 1.1
+smoothing: 0.1
+opter: 'Adam'
+Tau: 1.0

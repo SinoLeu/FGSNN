@@ -1,0 +1,22 @@
+# config.yml
+name_space: 'student_snn_dogs'
+batch_size: 16
+input_size: 224
+train_dir: '../data/dogs/train'
+test_dir: '../data/dogs/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 120
+is_distributed: false
+is_transfer: false
+mixed: '16-mixed'
+# arch: 'm'
+# name: 'qkformer'
+name: 'resnet'
+arch: '50'
+dataset: 'dogs'
+T: 4
+learning_rate: 0.00025
+# lr=1e-4,
+# learning_rate: 0.1
+smoothing: 0.2

@@ -1,0 +1,41 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/cars/train' --test_dir '../data/cars/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'our_sample_kdsnn_cub'
+# batch_size: 16
+batch_size: 16
+# input_size: 224
+input_size: 224
+train_dir: '../data/cub/train'
+test_dir: '../data/cub/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 200
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# stu_arch: 'l'
+# name: 'resformer'
+name: 'qkformer'
+stu_arch: 'm'
+# name: 'qkformer'
+# stu_arch: '50'
+# name: 'sewresnet'
+tea_arch: 'deit3_base_patch16_224'
+pre_trained_tea_path: 'pre_trained_ann_model/deit3_base_patch16_224.fb_in22k_ft_in1k_cub.pth'
+learning_rate: 0.00035
+# learning_rate: 0.01
+dataset: 'cub'
+T: 1
+cam_path: 'resnet50_cub_CAM_data_cub.h5'
+multistage_pth_path: 'pre_trained_ann_model/deit3_base_patch16_224.fb_in22k_ft_in1k_cub_multistage.pth'
+# multistage_pth_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_dogs_multistage.pth'
+hyper_cam: 14.5
+# hyper_cam: 12.5
+noise_weight: 0.5
+top_k: 50
+smoothing: 0.2
+opter: 'Adam'
+prob_mask: 0.15
+Tau: 2.0
+# opter: 'SGD'
+# python pl_train_kd_our_sample_snn.py --config config/dogs/plt_our_kdtrain_snn_dogs.yml  --print-yaml 

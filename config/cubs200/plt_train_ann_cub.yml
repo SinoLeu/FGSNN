@@ -1,0 +1,24 @@
+# config.yml
+name_space: 'teacher_vit_cub'
+batch_size: 64
+input_size: 224
+train_dir: '../data/cub/train'
+test_dir: '../data/cub/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 200
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'swin_base_patch4_window7_224'
+# arch: 'convnext_large.fb_in22k_ft_in1k'
+# arch: 'seresnext101d_32x8d.ah_in1k'
+# arch: 'deit3_base_patch16_384.fb_in22k_ft_in1k'
+# arch: 'tresnet_l'
+# arch: 'resnet50.a1_in1k'
+# arch: 'deit3_base_patch16_384.fb_in22k_ft_in1k'
+arch: 'vit_base_patch16_224'
+dataset: 'cub'
+learning_rate: 0.00025
+# learning_rate: 0.01
+smoothing: 0.2

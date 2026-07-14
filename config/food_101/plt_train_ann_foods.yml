@@ -1,0 +1,16 @@
+# config.yml
+name_space: 'teacher_swin_foods'
+batch_size: 64
+input_size: 224
+train_dir: '../data/food-101/train'
+test_dir: '../data/food-101/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 101
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+arch: 'swin_base_patch4_window7_224'
+dataset: 'foods'
+learning_rate: 0.0001
+smoothing: 0.2

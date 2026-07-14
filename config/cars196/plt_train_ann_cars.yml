@@ -1,0 +1,27 @@
+# config.yml
+name_space: 'teacher_vit_cars'
+batch_size: 64
+input_size: 224
+train_dir: '../data/cars/train'
+test_dir: '../data/cars/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 196
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'swin_base_patch4_window7_224'
+# arch: 'vit_base_patch16_224
+# 'arch: 'mobilevitv2_125.cvnets_in1k'
+# arch: 'mobilevitv2_125.cvnets_in1k'
+# arch: 'efficientformerv2_s0.snap_dist_in1k'
+arch: 'efficientformerv2_l.snap_dist_in1k'
+# arch: 'resnet50.a1_in1k'
+dataset: 'cars'
+learning_rate: 0.0001
+smoothing: 0.2
+
+
+# mobilevitv2  84.39
+
+# efficientformerv2 8060

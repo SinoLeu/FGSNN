@@ -1,0 +1,22 @@
+# config.yml
+name_space: 'student_snn_nabirds'
+batch_size: 16
+input_size: 224
+train_dir: '../data/Nabirds/nabirds/train'
+test_dir: '../data/Nabirds/nabirds/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 555
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'l'
+# name: 'resformer'
+# arch: 'm'
+# name: 'qkformer'
+name: 'resnet'
+arch: '50'
+dataset: 'nabirds'
+T: 4
+learning_rate: 0.00025
+smoothing: 0.1

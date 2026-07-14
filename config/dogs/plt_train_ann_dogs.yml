@@ -1,0 +1,23 @@
+# config.yml
+name_space: 'teacher_swin_dogs'
+batch_size: 64
+input_size: 224
+train_dir: '../data/dogs/train'
+test_dir: '../data/dogs/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 120
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'swin_base_patch4_window7_224'
+# arch: 'swin_large_patch4_window7_224'
+# arch: 'resnet50.a1_in1k'
+# arch: 'deit_base_patch16_224'
+# arch: 'deit3_base_patch16_224.fb_in22k_ft_in1k'
+# arch: 'mobilevitv2_125.cvnets_in1k'
+arch: 'efficientformerv2_l.snap_dist_in1k'
+dataset: 'dogs'
+# learning_rate: 0.01
+learning_rate: 0.0001
+smoothing: 0.1

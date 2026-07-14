@@ -1,0 +1,22 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/cars/train' --test_dir '../data/cars/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'kdsnn_cars'
+batch_size: 16
+input_size: 224
+train_dir: '../data/cars/train'
+test_dir: '../data/cars/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 196
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+stu_arch: 'm'
+# name: 'resformer'
+name: 'qkformer'
+tea_arch: 'swin_base_patch4_window7_224'
+pre_trained_tea_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_cars.pth'
+learning_rate: 0.00025
+dataset: 'cars'
+T: 2
+kd_weight: 0.1

@@ -1,0 +1,32 @@
+# config.yml
+## python pl_train_ann.py --batch_size 64 --input_size 256 --train_dir '../data/cars/train' --test_dir '../data/cars/test' --resnet_scale '50' --max_epochs 128  --checkpoint_dir 'logs' --num_classes 196 --is_distributed  --is_transfer --mixed bf16
+name_space: 'teacher_swin_multistage_module'
+batch_size: 64
+input_size: 224
+train_dir: '../data/food-101/train'
+test_dir: '../data/food-101/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 101
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+arch: 'swin_base_patch4_window7_224'
+pre_trained_path: 'logs/'
+learning_rate: 0.0001
+pre_trained_path: 'pre_trained_ann_model/swin_base_patch4_window7_224_foods.pth'
+smoothing: 0.2
+dataset: 'foods'
+stu_arch: 'm'
+#  strings /home/h666/.conda/envs/snn/lib/python3.8/site-packages/PIL/../../.././libLerc.so.4 | grep GLIBCXX_3.4.29
+# cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.29 /home/xx/anaconda3/bin/../lib
+
+
+# rm /home/h666/.conda/envs/snn/bin/../lib/libstdc++.so.6
+# rm /home/h666/.conda/envs/snn/bin/../lib/libstdc++.so.6
+# cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.29 /home/h666/.conda/bin/../lib
+# ln -s /home/xx/anaconda3/bin/../lib/libstdc++.so.6.0.29 /home/xx/anaconda3/bin/../lib/libstdc++.so.6
+
+# sudo cp /home/h666/env/anaconda3/lib/libstdc++.so.6.0.29 /usr/lib/x86_64-linux-gnu/
+# sudo rm /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+# sudo ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.29 /usr/lib/x86_64-linux-gnu/libstdc++.so.6

@@ -1,0 +1,26 @@
+# config.yml
+name_space: 'teacher_swin_aircraft'
+batch_size: 32
+input_size: 224
+train_dir: '../data/aircraft/train'
+test_dir: '../data/aircraft/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 100
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'swin_base_patch4_window7_224'
+# arch: 'resnet50.a1_in1k'
+# arch: 'deit3_base_patch16_224.fb_in22k_ft_in1k'
+# arch: 'mobilevit_s.cvnets_in1k'
+arch: 'efficientformerv2_l.snap_dist_in1k'
+dataset: 'dogs'
+dataset: 'aircraft'
+learning_rate: 0.00025
+# learning_rate: 0.01
+# learning_rate: 0.024
+smoothing: 0.1
+
+# deit3 88.95
+# mobilevitv2 aircraft 87.25

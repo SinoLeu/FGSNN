@@ -1,0 +1,22 @@
+# config.yml
+name_space: 'student_snn_cars'
+batch_size: 16
+input_size: 224
+train_dir: '../data/cars/train'
+test_dir: '../data/cars/test'
+max_epochs: 50
+checkpoint_dir: 'logs'
+num_classes: 196
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+# arch: 'l'
+# name: 'resformer'
+arch: 'm'
+name: 'qkformer'
+dataset: 'cars'
+T: 4
+learning_rate: 0.00025
+smoothing: 0.2
+kd_weight: 0.1
+cam_path: 'swin_base_cars_CAM_data_cars.h5'

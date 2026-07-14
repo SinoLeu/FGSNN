@@ -1,0 +1,20 @@
+# config.yml
+name_space: 'teacher_swin_nabirds'
+batch_size: 64
+input_size: 224
+train_dir: '../data/Nabirds/nabirds/train'
+test_dir: '../data/Nabirds/nabirds/test'
+max_epochs: 60
+checkpoint_dir: 'logs'
+num_classes: 555
+is_distributed: true
+is_transfer: true
+mixed: '16-mixed'
+arch: 'swin_base_patch4_window7_224'
+# arch: 'deit_base_patch16_224.fb_in1k'
+# arch: 'vit_base_patch16_224.augreg_in21k'
+# arch: 'resnet50.a1_in1k'
+dataset: 'nabirds'
+learning_rate: 0.0001
+# learning_rate: 0.01
+smoothing: 0.2
